@@ -3,18 +3,12 @@ import firebase from "firebase";
 
 const UserDetails = ({param}) =>{
     const [data,setData] = useState(param)
-    const db = firebase.firestore()
-    useEffect(()=>{
-        fetch(db.collection('lists'))
-        .then((res)=>{return res})
-        .then((_data)=>{setData(_data)})
-
-    },[])
+    
     
  return(
      <>
-     {param.name}
-     {data.map(action=> <li>{action.name}</li>)}
+     param.name
+     
      Estimated Reading Time: 1 min
             EXPLORE FURTHER
             How to redirect to a particular section of a page in html ...	stackoverflow.com

@@ -5,7 +5,8 @@ const News = () =>{
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        fetch('')
+        fetch('https://api.nytimes.com/svc/topstories/v2/science.json?api-key=dYbWrWQ8uwiSAqI63nrMFptr8vZZAPcE')
+        .get('/home.json')
         .then((res) =>{return res.json()})
         .then((_data) =>{setData(_data)})
         .catch((err)=>{console.log(err)})
